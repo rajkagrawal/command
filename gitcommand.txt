@@ -1,0 +1,56 @@
+1. List existing remotes
+$git remote -v
+origin  https://github.com/rajaanova/chat-server.git (fetch)
+origin  https://github.com/rajaanova/chat-server.git (push)
+
+
+
+2. Set remote url using SSH
+git remote set-url git@github.com/<username>/<repo.git>
+
+3. Set remote url using HTTP
+git remote set-url https://github.com/<username>/<repo.git>
+
+4. Forcefully push your changes
+git push -f
+or
+git push --force
+
+5. Reset everything to your master branch
+git reset --hard origin/master
+
+6. List the branches in local repo
+git branch
+
+7. List branches merged in current local repo
+git branch --merged
+
+8. List branches not merged in current local repo
+git branch --no-merged
+
+9. Delete a branch (must not be on the same branch) , this only deletes the branch if its merged. To forcefully delete use -D instead
+git branch -d feature_branch
+
+10. Delete a remote branch
+git push -d origin feature_branch
+
+11. Delete stale remote-tracking branches(sometimes some user delete remote branch but other user still sees the remote-branch(tracking branhc) in order to delete those)
+git remote prune origin
+
+12. Fetch and prune, fetch only doesn't remove the deleted remote branch so inorder to prune stale branches
+git fetch --prune
+or
+git fetch -p
+
+13. Diff will see the difference between what is still unstaged
+git diff
+
+13. Diff will see the difference between what staged and last commited
+git diff --cached
+or
+git diff --staged
+
+14. Diff in some graphical/editor tool
+git difftool
+
+
