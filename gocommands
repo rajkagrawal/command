@@ -1,0 +1,8 @@
+#To find all the version of module
+go list -m -versions github.com/rajaanova/utility
+
+#will upgrade modules to latest in the same major version and update the mod file
+go get -u
+
+#This should be used when no c related libraries are used
+GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o main main.go
