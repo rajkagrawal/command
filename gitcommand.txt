@@ -54,3 +54,51 @@ git diff --staged
 git difftool
 
 
+15. configuration related
+git config --global --list	list global values
+git config –list
+git config –edit
+git config –add key1 value1
+git config –unset key1
+#add diff tool
+git config –global –add diff.tool p4m
+
+
+16.
+
+#see commit history in oneline
+git log –oneline
+
+#name of the remote
+git remote
+
+#name of the remote with url
+git remote –verbose
+
+# rename the remote to xyz
+git remote rename origin xyz
+
+# remove the remote with xyz name
+git remote remove xyz
+
+#If any chages done but wanted to remove those changes from working directory
+git checkout hello.txt
+
+#If any chages done but wanted to remove those changes from working directory
+git resotre hellot.txt
+
+#removes from staging to working area, changes will not be gone
+git reset hello.txt
+
+#removes from staging to working area, changes will not be gone
+git restore --staged hello.txt
+
+#difference between current and snapshot
+git diff hello.txt
+
+#renaming the file
+git mv hello.txt xyz.txt
+
+# tag the current commit and push
+git tag v1.0.0
+git push –tags
